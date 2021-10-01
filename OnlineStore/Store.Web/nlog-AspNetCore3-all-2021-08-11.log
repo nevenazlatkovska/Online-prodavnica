@@ -1,0 +1,10 @@
+2021-08-11 14:30:05.4015|0|DEBUG|Store.Web.Program|init main 
+2021-08-11 14:30:12.4239|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-08-11 14:30:12.4882|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-08-11 14:30:12.4978|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\User\Desktop\OnlineStore\Store.Web 
+2021-08-11 14:30:29.4124|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-08-11 14:30:41.2340|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-08-11 14:30:46.7296|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-08-11 14:30:51.0115|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-08-11 14:30:54.5120|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-08-11 14:30:58.6006|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 

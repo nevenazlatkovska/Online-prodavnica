@@ -1,0 +1,75 @@
+2021-10-01 10:32:45.2278|0|DEBUG|Store.Web.Program|init main 
+2021-10-01 10:32:51.1218|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-01 10:32:51.1614|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-01 10:32:51.1711|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\User\Desktop\OnlineStore\Store.Web 
+2021-10-01 11:54:29.0241|0|DEBUG|Store.Web.Program|init main 
+2021-10-01 11:54:33.9071|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-01 11:54:33.9408|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-01 11:54:33.9560|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\User\Desktop\OnlineStore\Store.Web 
+2021-10-01 12:02:18.7152|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:02:32.4558|0|INFO|Store.Services.Implementation.ProductService|Product was successfully added into ShoppingCart 
+2021-10-01 12:02:32.4831|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:02:46.1830|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:03:09.5845|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:03:14.9747|0|INFO|Store.Services.Implementation.ProductService|Product was successfully added into ShoppingCart 
+2021-10-01 12:03:14.9962|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:05:26.1637|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:09:42.0238|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:09:45.8830|0|INFO|Store.Services.Implementation.ProductService|Product was successfully added into ShoppingCart 
+2021-10-01 12:09:45.9035|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:13:48.4806|0|DEBUG|Store.Web.Program|init main 
+2021-10-01 12:13:57.1897|0|ERROR|Store.Web.Program|Stopped program because of exception MailKit.Security.SslHandshakeException: An error occurred while attempting to establish an SSL or TLS connection.
+
+The server's SSL certificate could not be validated for the following reasons:
+• The server certificate has the following errors:
+  • The revocation function was unable to check revocation for the certificate.
+
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+   at System.Net.Security.SslStream.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartSendBlob(Byte[] incoming, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslStream.ThrowIfExceptional()
+   at System.Net.Security.SslStream.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsClient(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsClientAsync>b__65_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, Boolean doAsync, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.ConnectAsync(String host, Int32 port, SecureSocketOptions options, Boolean doAsync, CancellationToken cancellationToken)
+   at Store.Services.Implementation.EmailService.SendEmailAsync(List`1 allMails) in C:\Users\User\Desktop\OnlineStore\Store.Services\Implementation\EmailService.cs:line 53
+   at Store.Services.Implementation.BackgroundEmailSender.DoWork() in C:\Users\User\Desktop\OnlineStore\Store.Services\Implementation\BackgroundEmailSender.cs:line 27
+   at Store.Services.ConsumeScopedHostedService.DoWork() in C:\Users\User\Desktop\OnlineStore\Store.Services\ConsumeScopedHostedService.cs:line 35
+   at Store.Services.ConsumeScopedHostedService.StartAsync(CancellationToken cancellationToken) in C:\Users\User\Desktop\OnlineStore\Store.Services\ConsumeScopedHostedService.cs:line 22
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Store.Web.Program.Main(String[] args) in C:\Users\User\Desktop\OnlineStore\Store.Web\Program.cs:line 21
+2021-10-01 12:14:49.1013|0|DEBUG|Store.Web.Program|init main 
+2021-10-01 12:14:54.0493|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-10-01 12:14:54.0944|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-10-01 12:14:54.1166|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\User\Desktop\OnlineStore\Store.Web 
+2021-10-01 12:42:23.7882|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:42:44.4931|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:43:00.6015|0|INFO|Store.Services.Implementation.ProductService|Product was successfully added into ShoppingCart 
+2021-10-01 12:43:00.6430|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:43:05.8438|0|INFO|Store.Services.Implementation.ProductService|Product was successfully added into ShoppingCart 
+2021-10-01 12:43:05.8726|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:43:40.0303|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
+2021-10-01 12:43:44.4020|0|INFO|Store.Services.Implementation.ProductService|GetAllProducts was called! 
